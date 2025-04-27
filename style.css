@@ -1,59 +1,354 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: "Poppins", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+header {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fafafa;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.logo {
+  color: #ed563b;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  display: block;
+  font-size: 0.8125rem;
+  color: #ed563b;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav ul li a:hover {
+  color: #faa495;
+}
+.nav-btn {
+  background-color: #ed563b;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.6875rem 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+.nav-btn:hover,
+.class-btn:hover {
+  background-color: rgba(237, 86, 59, 0.7);
+}
+/* halkan waxaa ka  bilabmaya stylinka qebta hero-ga */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  text-align: center;
+  overflow: hidden;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-transform: uppercase;
+}
+.hero-content h6 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.hero-content h2 {
+  font-size: 5.25rem;
+  margin-bottom: 1.5rem;
+}
+.hero-span {
+  color: #ed563b;
+}
+.hero-btn {
+  font-size: 1rem;
+}
+/* stylinka qeybta about-ka | progra choose-ka */
 
+#About {
+  height: 100vh;
+  margin-top: 10rem;
 }
-img{
-    max-width: 100%;
+.choose-program {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
 }
-header{
-    height: 4.5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #fafafa;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    
+.choose-program h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #232d39;
 }
-.logo{
-    color: #ed563b;
+.about-span {
+  color: #ed563b;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.5rem;
+.water {
+  color: #ed563b;
+  font-size: 2rem;
+  font-weight: 100;
 }
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
+.choose-program p {
+  width: 500px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #a7a7a7;
+  line-height: 1.5rem;
 }
-nav ul li{
-    list-style: none;
+.container {
+  width: min(90%, 1120px);
+  margin-inline: auto;
 }
-nav ul li a{
-    display: block;
-    font-size:0.8125rem ;
-    color: #ed563b;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-    
+/* qeybta about-ka | gaar ahaan qeybta dumbellska */
+.fitness {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-top: 5rem;
 }
-nav ul li a:hover{
-    color: #faa495;
+.basic-fitnes,
+.advanced-fitness {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
 }
-.nav-btn{
+.basic-image,
+.advanced-image {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+.dumbell-icon {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+}
+.dumbell {
+  font-size: 4rem;
+  font-weight: 100;
+  background-color: #ed563b;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.basic-content,
+.advanced-content {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.basic-content h3,
+.advanced-content h3 {
+  font-size: 1.1875rem;
+  font-weight: 600;
+}
+.basic-content p,
+.advanced-content p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: #a7a7a7;
+}
+.basic-content a,
+.advanced-content a {
+  color: #ed563b;
+  text-decoration: none;
+  font-size: 0.77rem;
+  font-weight: 500;
+}
+
+/* members */
+.members {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("https://images.unsplash.com/photo-1734668485281-c1d03fee6023?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHZpZG91JTIwZ3ltfGVufDB8fDB8fHww")
+      center/ cover no-repeat;
+  background-attachment: fixed;
+  margin-block: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+em {
+  color: #ed563b;
+}
+.member h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.member p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-block: 0.5rem;
+}
+.member-btn {
+  font-size: 1rem;
+}
+/* stylin-ka qeybta classeska */
+#classes {
+  height: 100vh;
+  margin-top: 10rem;
+}
+.class {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+  margin-top: 5rem;
+}
+.left-class {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.left-class-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 0.2rem;
+}
+.left-class-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.left-class-info .left-h3 {
+  color: #ed563b;
+}
+.left-class-info .second {
+  font-size: 1.1rem;
+}
+.class-dumbell {
+  font-size: 2rem;
+  color: #ed563b;
+}
+.left-class-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  background-color: #ed563b;
+  padding: 1.5rem;
+  color: #fff;
+  width: 21.875rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.right-class {
+  grid-column: 2/4;
+  width: 100%;
+}
+.right-class img {
+  width: 100%;
+  height: 300px;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+}
+.right-class-info {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.right-class-info h2 {
+  font-size: 1.4375rem;
+  font-weight: 700;
+}
+.right-class-info p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #a7a7a7;
+}
+.right-class-btn {
+  font-size: 1rem;
+}
+
+/* halkan waxaa ka bilaabmaya responsive */
+@media (max-width: 780px) {
+  nav ul {
+    display: none;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .nav-btn {
     background-color: #ed563b;
     color: #fff;
     font-size: 0.8125rem;
@@ -61,246 +356,43 @@ nav ul li a:hover{
     padding: 0.6875rem 1.1rem;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color 0.3s ease-in-out;
-}
-.nav-btn:hover{
-    background-color: #faa495;
-}
-/* halkan waxaa ka  bilabmaya stylinka qebta hero-ga */
-.hero{
-    position: relative;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-    text-align: center;
-    overflow: hidden;
-}
-.video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
-.hero-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-    text-transform: uppercase;
-}
-.hero-content h6{
-    font-size: 1.1rem;
-    font-weight: 800;
-    margin-top: 2rem;
+  }
+  /* qoralka heroga */
+  .hero-content h2 {
+    font-size: 3.5rem;
+    line-height: 3.8rem;
     margin-bottom: 1.5rem;
+  }
 
-}
-.hero-content h2{
-    font-size: 5.25rem;
-    margin-bottom: 1.5rem;
-}
-.hero-span{
-    color: #ed563b;
-}
-.hero-btn{
-    font-size: 1rem;
-}
-/* stylinka qeybta about-ka | progra choose-ka */
-
-#About{
-    height: 100vh;
-    margin-top: 10rem;
-    
-}
-.choose-program{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-}
-.choose-program h2{
-    font-size: 1.75rem;
+  /* qeybta choose programkka */
+  .choose-program h2 {
+    font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
     color: #232d39;
-}
-.about-span{
-    color: #ed563b;
-}
-.water{
-    color: #ed563b;
-    font-size: 2rem;
-    font-weight: 100;
-}
-.choose-program p{
-    width: 500px;
-    font-size: .9rem;
-    font-weight: 400;
-    color: #a7a7a7;
-    line-height: 1.5rem;
-}
-.container{
-    width: min(90%, 1120px);
-    margin-inline: auto;
-}
-/* qeybta about-ka | gaar ahaan qeybta dumbellska */
-.fitness {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    margin-top: 5rem;
-}
-.basic-fitnes, .advanced-fitness{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5rem;
-}
-.basic-image, .advanced-image{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-}
-.dumbell-icon{
-    display: flex;
-    justify-content: center;
-    align-items: self-start;
-}
-.dumbell{
-    font-size: 4rem;
-    font-weight: 100;
-    background-color: #ed563b;
-    color: #fff;
-    padding: 2rem;
-    border-radius: .5rem;
-}
-.basic-content, .advanced-content{
-    display: flex;
-    justify-content: center;
-    align-items: self-start;
-    flex-direction: column;
-    gap: .6rem;
-}
-.basic-content h3, .advanced-content h3{
-    font-size: 1.1875rem;
-    font-weight: 600;
-}
-.basic-content p, .advanced-content p{
+  }
+  .choose-program p {
+    width: 350px;
     font-size: 0.8rem;
     font-weight: 400;
-    line-height: 1.6rem;
     color: #a7a7a7;
-}
-.basic-content a, .advanced-content a{
-    color: #ed563b;
-    text-decoration: none;
-    font-size: 0.77rem;
-    font-weight: 500;
-}
-
-/* members */
-.members{
-    height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("https://images.unsplash.com/photo-1734668485281-c1d03fee6023?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHZpZG91JTIwZ3ltfGVufDB8fDB8fHww")center/ cover no-repeat;
-   background-attachment: fixed;
-    margin-block: 6rem;
+    line-height: 1.2rem;
+  }
+  .fitness {
+    grid-template-columns: 1fr;
+  }
+  /* members */
+  .members {
+    margin-top: 70rem;
+  }
+  .member h2 {
+    line-height: 2.5rem;
+  }
+  /* classes */
+  .class{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-.member{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-}
-em{
-    color: #ed563b;
-}
-.member h2{
-    font-size: 2.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-.member p{
-    font-size: 1rem;
-    font-weight: 400;
-    margin-block: .5rem;
-}
-.member-btn{
-    font-size: 1rem;
-}
-
-
-
-
-/* halkan waxaa ka bilaabmaya responsive */
-@media(max-width:780px){
-    nav ul{
-        display: none;
-    }
-    header h1{
-        font-size: 1.5rem;
-    }
-    .nav-btn{
-        background-color: #ed563b;
-        color: #fff;
-        font-size: 0.8125rem;
-        font-weight: 500;
-        padding: 0.6875rem 1.1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-    /* qoralka heroga */
-    .hero-content h2{
-        font-size: 3.5rem;
-        line-height: 3.8rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    /* qeybta choose programkka */
-    .choose-program h2{
-        font-size: 1.5rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        color: #232d39;
-    }
-    .choose-program p{
-        width: 350px;
-        font-size: .8rem;
-        font-weight: 400;
-        color: #a7a7a7;
-        line-height: 1.2rem;
-    }
-    .fitness {
-        grid-template-columns: 1fr;
-    }
-    /* members */
-    .members{
-        margin-top: 70rem;
-    }
-    .member h2{
-        line-height: 2.5rem;
-    }
+  }
+  
+ 
 }
